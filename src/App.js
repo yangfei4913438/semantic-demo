@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { Button, Icon, Label } from 'semantic-ui-react'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button as='div' labelPosition='right'>
+        <Button icon>
+          <Icon name='heart' />
+          Like
+        </Button>
+        <Label as='a' basic pointing='left'>
+          2,048
+        </Label>
+      </Button>
+      <Button as='div' labelPosition='left'>
+        <Label as='a' basic pointing='right'>
+          2,048
+        </Label>
+        <Button icon>
+          <Icon name='heart' />
+          Like
+        </Button>
+      </Button>
+      <Button as='div' labelPosition='left'>
+        <Label as='a' basic>
+          2,048
+        </Label>
+        <Button icon>
+          <Icon name='fork' />
+        </Button>
+      </Button>
     </div>
   );
 }
